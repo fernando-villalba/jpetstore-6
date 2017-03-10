@@ -8,5 +8,11 @@ node {
         sh 'mvn clean install'
 
     }
+    stage('archive') {
+        junit 'target/surefire-reports'
+        archiveArtifacts 'target/jpetstore.war'
+
+
+    }
 
 }
