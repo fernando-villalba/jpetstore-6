@@ -5,7 +5,7 @@ node {
     }
 
     stage('build') {
-        sh 'mvn clean install'
+        sh 'mvn clean install jacoco:check'
 
     }
     stage('archive') {
