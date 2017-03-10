@@ -9,7 +9,7 @@ node {
 
     }
     stage('archive') {
-        junit 'target/surefire-reports'
+        junit 'target/surefire-reports/*.xml'
         archiveArtifacts 'target/jpetstore.war'
 
 
